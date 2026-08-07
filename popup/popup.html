@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Job Tracker</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+    <div class="popup-header">
+      <span class="wordmark">Job Tracker</span>
+    </div>
+
+    <div id="loadingView" class="state">
+      <p class="muted">Checking this page…</p>
+    </div>
+
+    <div id="detectedView" class="state hidden">
+      <div class="detected-card">
+        <div class="logo-circle" id="detectedLogo">?</div>
+        <div class="detected-titles">
+          <input id="detectedRole" class="edit-input" placeholder="Role title" />
+          <input id="detectedCompany" class="edit-input small" placeholder="Company name" />
+        </div>
+      </div>
+      <div class="btn-row">
+        <button id="saveForLaterBtn" class="btn secondary">Save for later</button>
+        <button id="justAppliedBtn" class="btn primary">I just applied</button>
+      </div>
+    </div>
+
+    <div id="formNudgeView" class="state hidden">
+      <p>Is this a job application form?</p>
+      <div class="btn-row">
+        <button id="formNoBtn" class="btn secondary">No</button>
+        <button id="formYesBtn" class="btn primary">Yes, log it</button>
+      </div>
+    </div>
+
+    <div id="manualView" class="state hidden">
+      <label class="field-label">Company</label>
+      <input id="manualCompany" class="edit-input" placeholder="e.g. Figma" />
+      <label class="field-label">Role</label>
+      <input id="manualRole" class="edit-input" placeholder="e.g. Product Designer" />
+      <label class="field-label">Stage</label>
+      <select id="manualStage" class="edit-input">
+        <option value="saved">Saved</option>
+        <option value="applied" selected>Applied</option>
+      </select>
+      <button id="manualSaveBtn" class="btn primary" style="width:100%; margin-top: 10px;">Add to board</button>
+    </div>
+
+    <div id="confirmView" class="state hidden">
+      <p class="confirm-text">Added to your board.</p>
+    </div>
+
+    <button id="viewBoardBtn" class="btn link-btn">View full board</button>
+  </div>
+
+  <script src="../shared/utils.js"></script>
+  <script src="../shared/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

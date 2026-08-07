@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Job Tracker — Board</title>
+<link rel="stylesheet" href="board.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="wordmark">Job Tracker</div>
+    <button class="add-btn" id="addBtn">+ Add application</button>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="overlay" id="detailOverlay">
+    <div class="modal" id="detailModal"></div>
+  </div>
+
+  <div class="overlay" id="moveOverlay">
+    <div class="modal" id="moveModal"></div>
+  </div>
+
+  <div class="overlay" id="addOverlay">
+    <div class="modal" id="addModal"></div>
+  </div>
+
+  <script src="../shared/utils.js"></script>
+  <script src="../shared/storage.js"></script>
+  <script src="board.js"></script>
+</body>
+</html>
